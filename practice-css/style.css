@@ -2,7 +2,7 @@
 
 html {
   font-family: 'Helvetica neue', Arial, 'sans serif';
-  font-size: 40px;
+  font-size: 10px;
 }
 
 body {
@@ -55,8 +55,8 @@ main p, main li {
 
 img {
   float: right;
-  width: 600px;
-  height: 600px;
+  width: 150px;
+  height: 150px;
 
   margin: 10px 10px 10px 10px;
 }
