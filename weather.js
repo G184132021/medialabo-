@@ -49,3 +49,7 @@ let data = {
 console.log(data.name);
 console.log(data.main.temp_max);
 console.log(data.main.temp_min);
+
+let s = document.querySelector('span#data');
+s.textContent = data;
+
