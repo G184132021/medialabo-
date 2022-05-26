@@ -56,3 +56,10 @@ let n = document.querySelector('span#data2');
 n.textContent = data.main.temp_max;
 let m = document.querySelector('span#data3');
 m.textContent = data.main.temp_min;
+
+let q = document.querySelector('button#kensaku');
+q.addEventListener('click', alldata);
+function alldata(){
+  let w = document.querySelector('input[name = "weather"]');
+  let ans = w.value;
+}
