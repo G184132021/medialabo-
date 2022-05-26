@@ -50,6 +50,9 @@ console.log(data.name);
 console.log(data.main.temp_max);
 console.log(data.main.temp_min);
 
-let s = document.querySelector('span#data');
-s.textContent = data;
-
+let s = document.querySelector('span#data1');
+s.textContent = data.name;
+let n = document.querySelector('span#data2');
+n.textContent = data.main.temp_max;
+let m = document.querySelector('span#data3');
+m.textContent = data.main.temp_min;
