@@ -5,39 +5,45 @@
     <title>Projects</title>
     <link rel="stylesheet" href="kirin.css">
     <script src="weather.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
   </head>
 
   <body>
     <!-- put navigation menu just below here -->
-
-    <h1>My projects</h1>
+   
+    <h1>世界の天気</h1>
     <label for="weather">検索：</label>
-    <input type="search" name="weather" id="weather" size="50">
-    <button id="kensaku"> 🔍</button>
-    <ul>
-      <li>カイロ</li>
-      <li>モスクワ</li>
-      <li>ヨハネスブルク</li>
-      <li>北京</li>
-      <li>東京</li>
-      <li>シンガポール</li>
-      <li>シドニー</li> 
-      <li>ロンドン</li>
-      <li>パリ</li>
-      <li>リオデジャネイロ</li> 
-      <li>ニューヨーク</li>
-      <li>ロサンゼルス</li>
-    </ul>
-      <h2>＜天気について＞</h2>
-<p>今の天気の画像</p>
-<p>下に気温、降水確率、最高気温、最低気温</p>
-<p>天気表</p>
-<p>縦軸　要素名（時刻、気温、降水確率）</p>
-<p>横軸　時間、気温、降水確率</p>
+    <select name="tenki" id="tenki">
+      <option value="">--地名--</option>
+      <option value="360630">Cairo カイロ （エジプト）</option>
+      <option value="524901">Moscow モスクワ （ロシア）</option>
+      <option value="993800">Johannesburg ヨハネスブルク （南アフリカ）</option>
+      <option value="1816670">Beijing 北京 （中華人民共和国）</option>
+      <option value="1850147">Tokyo 東京 （日本）</option>
+      <option value="1880252">Singapore シンガポール</option>
+      <option value="2147714">Sydney シドニー （オーストラリア）</option>
+      <option value="2643743"> London ロンドン （イギリス）</option>
+      <option value="2968815">Paris パリ （フランス）</option>
+      <option value="3451189">Rio de Janeiro リオデジャネイロ （ブラジル）</option>
+      <option value="5128581">New York ニューヨーク （アメリカ合衆国）</option>
+      <option value="5368361">Los Angeles ロサンゼルス （アメリカ合衆国）</option>
 
-    <p><span id="data1"></span></p>
-    <p><span id="data2"></span></p>
-    <p><span id="data3"></span></p>
+    </select>
+      
+
+      <button id="kensaku">🔍</button>
+  
+    <h2><span id="data1"></span></h2>
+      <p>今の天気の画像</p>
+      <p>下に気温、降水確率、最高気温、最低気温</p>
+      <p>天気表</p>
+      <p>縦軸　要素名（時刻、気温、降水確率）</p>
+      <p>横軸　時間、気温、降水確率</p>
+
     
+      <p><span id="data2"></span></p>
+      <p><span id="data3"></span></p>
+    
+  
   </body>
 </html>

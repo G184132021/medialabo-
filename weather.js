@@ -50,16 +50,64 @@ console.log(data.name);
 console.log(data.main.temp_max);
 console.log(data.main.temp_min);
 
-let s = document.querySelector('span#data1');
-s.textContent = data.name;
-let n = document.querySelector('span#data2');
-n.textContent = data.main.temp_max;
-let m = document.querySelector('span#data3');
-m.textContent = data.main.temp_min;
 
-let q = document.querySelector('button#kensaku');
+//let n = document.querySelector('span#data2');
+//n.textContent = data.main.temp_max;
+//let m = document.querySelector('span#data3');
+//m.textContent = data.main.temp_min;
+
+/*et q = document.querySelector('button#kensaku');
 q.addEventListener('click', alldata);
 function alldata(){
   let w = document.querySelector('input[name = "weather"]');
   let ans = w.value;
 }
+*/
+let b = document.querySelector('button#kensaku');
+b.addEventListener('click', sendRequest);
+
+
+// 通信を開始する処理
+function sendRequest() {
+  let i = document.querySelector('#tenki[name="tenki"]');
+  let v = i.value;
+    // URL を設定
+    let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+v+'.json';
+
+    // 通信開始
+    axios.get(url)
+        .then(showResult)   // 通信成功
+        .catch(showError)   // 通信失敗
+        .then(finish);      // 通信の最後の処理
+}
+
+// 通信が成功した時の処理
+function showResult(resp) {
+    // サーバから送られてきたデータを出力
+    let data = resp.data;
+
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+
+    // data をコンソールに出力
+    console.log(data);
+    let s = document.querySelector('span#data1');
+    s.textContent = "＜"+data.name+"の天気＞";
+
+    // data.x を出力
+    console.log(data.x);
+}
+
+// 通信エラーが発生した時の処理
+function showError(err) {
+    console.log(err);
+
+}
+
+// 通信の最後にいつも実行する処理
+function finish() {
+    console.log('Ajax 通信が終わりました');
+}
+  
