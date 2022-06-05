@@ -51,10 +51,10 @@ console.log(data.main.temp_max);
 console.log(data.main.temp_min);
 
 
-let n = document.querySelector('span#data2');
-n.textContent = data.main.temp_max;
-let m = document.querySelector('span#data3');
-m.textContent = data.main.temp_min;
+//let n = document.querySelector('span#data2');
+//n.textContent = data.main.temp_max;
+//let m = document.querySelector('span#data3');
+//m.textContent = data.main.temp_min;
 
 
 let b = document.querySelector('button#kensaku');

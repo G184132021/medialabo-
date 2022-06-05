@@ -11,25 +11,29 @@
   <body>
     <!-- put navigation menu just below here -->
    
-    <h1>世界の天気</h1>
-    <p>検索：
-      <select name="tenki" id="tenki">
-        <option value="">--地名--</option>
-        <option value="360630">Cairo カイロ （エジプト）</option>
-        <option value="524901">Moscow モスクワ （ロシア）</option>
-        <option value="993800">Johannesburg ヨハネスブルク （南アフリカ）</option>
-        <option value="1816670">Beijing 北京 （中華人民共和国）</option>
-        <option value="1850147">Tokyo 東京 （日本）</option>
-        <option value="1880252">Singapore シンガポール</option>
-        <option value="2147714">Sydney シドニー （オーストラリア）</option>
-        <option value="2643743"> London ロンドン （イギリス）</option>
-        <option value="2968815">Paris パリ （フランス）</option>
-        <option value="3451189">Rio de Janeiro リオデジャネイロ （ブラジル）</option>
-        <option value="5128581">New York ニューヨーク （アメリカ合衆国）</option>
-        <option value="5368361">Los Angeles ロサンゼルス （アメリカ合衆国）</option>
-      </select>
-    <button id="kensaku">🔍</button>
-    </p>
+    <div class="h0">
+      <div class="h1"><p>世界の天気 </p></div>
+      <div class="h2">
+        <p>検索：
+          <select name="tenki" id="tenki">
+            <option value="">--地名--</option>
+            <option value="360630">Cairo カイロ （エジプト）</option>
+            <option value="524901">Moscow モスクワ （ロシア）</option>
+            <option value="993800">Johannesburg ヨハネスブルク （南アフリカ）</option>
+            <option value="1816670">Beijing 北京 （中華人民共和国）</option>
+            <option value="1850147">Tokyo 東京 （日本）</option>
+            <option value="1880252">Singapore シンガポール</option>
+            <option value="2147714">Sydney シドニー （オーストラリア）</option>
+            <option value="2643743"> London ロンドン （イギリス）</option>
+            <option value="2968815">Paris パリ （フランス）</option>
+            <option value="3451189">Rio de Janeiro リオデジャネイロ （ブラジル）</option>
+            <option value="5128581">New York ニューヨーク （アメリカ合衆国）</option>
+            <option value="5368361">Los Angeles ロサンゼルス （アメリカ合衆国）</option>
+          </select>
+        <button id="kensaku">🔍</button>
+        </p>
+      </div>
+    </div>
     <h2><span id="data1"></span></h2>
     
     <div id="box">
@@ -37,15 +41,7 @@
       <p><span id="max"></span><span id="min"></span><span id="humidity"></span></p>
     </div>
 
-      <p>今の天気の画像</p>
-      <p>下に気温、降水確率、最高気温、最低気温</p>
-      <p>天気表</p>
-      <p>縦軸　要素名（時刻、気温、降水確率）</p>
-      <p>横軸　時間、気温、降水確率</p>
-
-    
-      <p><span id="data2"></span></p>
-      <p><span id="data3"></span></p>
+      
     
   
   </body>
