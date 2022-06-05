@@ -51,18 +51,12 @@ console.log(data.main.temp_max);
 console.log(data.main.temp_min);
 
 
-//let n = document.querySelector('span#data2');
-//n.textContent = data.main.temp_max;
-//let m = document.querySelector('span#data3');
-//m.textContent = data.main.temp_min;
+let n = document.querySelector('span#data2');
+n.textContent = data.main.temp_max;
+let m = document.querySelector('span#data3');
+m.textContent = data.main.temp_min;
 
-/*et q = document.querySelector('button#kensaku');
-q.addEventListener('click', alldata);
-function alldata(){
-  let w = document.querySelector('input[name = "weather"]');
-  let ans = w.value;
-}
-*/
+
 let b = document.querySelector('button#kensaku');
 b.addEventListener('click', sendRequest);
 
@@ -95,6 +89,16 @@ function showResult(resp) {
     console.log(data);
     let s = document.querySelector('span#data1');
     s.textContent = "＜"+data.name+"の天気＞";
+    let a = document.querySelector('span#weather');
+    a.textContent = data.weather[0].description;
+    let c = document.querySelector('span#temp');
+    c.textContent = data.main.temp+"℃";
+    let d = document.querySelector('span#max');
+    d.textContent = data.main.temp_max+"℃";
+    let e = document.querySelector('span#min');
+    e.textContent = data.main.temp_min+"℃";
+    let f = document.querySelector('span#humidity');
+    f.textContent = "湿度"+data.main.humidity+"%";
 
     // data.x を出力
     console.log(data.x);
