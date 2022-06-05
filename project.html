@@ -8,11 +8,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
   </head>
 
-  <body>
+  <body class="body">
     <!-- put navigation menu just below here -->
 
-    <div class="h0">
-      <div class="h1"><p class="n1">～世界の天気～</p></div>
+    <div id="h0" class="h0">
+      <div id="h1" class="h1"><p class="n1">― 世界の天気 ―</p></div>
       <div class="h2">
         <p>検索：
           <select name="tenki" id="tenki">
@@ -30,16 +30,22 @@
             <option value="5128581">New York ニューヨーク （アメリカ合衆国）</option>
             <option value="5368361">Los Angeles ロサンゼルス （アメリカ合衆国）</option>
           </select>
-        <button id="kensaku">🔍</button>
+        <button id="kensaku" class="kensaku">🔍</button>
         </p>
       </div>
     </div>
-    <h2><span id="data1"></span></h2>
     
-    <div id="box">
-      <p><span id="weather"></span><span id="temp"></span></p>
-      <p><span id="max"></span><span id="min"></span><span id="humidity"></span></p>
-    </div>
+    
+   <!-- <div class="hidden_box">
+      <input type="checkbox" id="check"/>
+      <div class="hidden_show">-->
+        <div class="box">
+          <h2><span id="data1"></span></h2>
+          <p><span id="weather"></span><span id="temp"></span></p>
+          <p><span id="max"></span><span id="min"></span><span id="humidity"></span></p>
+        </div>
+     <!--   </div>
+    </div>-->
 
       
     

@@ -1,10 +1,12 @@
+
 div.box{
     border: aqua;
     border-radius: 10px 100px / 120px;
     padding: 40px;
-    margin: 40px;
-    width: 300px;
-    height: 150px;
+    width: 450px;
+    height: 250px;
+    background-color: rgba(85, 168, 206, 0.768);
+    margin: 0 auto;
   }
 
 div.h0{
@@ -14,14 +16,14 @@ div.h0{
   align-content: center;
   }
 
-  div.h1{
+ div.h1{
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 92px;
     max-height: 290px;
     height: calc(100% - 560px);
-    padding-top:15%;
+    padding-top:5%;
   }
 
   div.h2{
@@ -35,5 +37,34 @@ div.h0{
     font-family:"HG教科書体";
   }
   body{
-    background-image : "hare.jpeg";
+    background-image : url("sky.jpg");
   }
+  .n1{
+    font: size 80px;
+    color: azure;
+    text-shadow: 1px 2px 3px #808080;
+  }
+  .kensaku{
+    cursor :pointer;
+  }
+/*
+  .hidden_box .hidden_show{
+    opacity: 0;
+    transition: 0.8s;
+  }
+
+  .hidden_box input:checked ~ .hidden_show {
+    height: auto;
+    opacity: 1;
+    height: auto;
+}
+.hidden_box input {
+  display: none;
+}
+*/
+body.body{
+  font-family:"HG教科書体";
+}
+h2{
+  margin-top: 0;
+}
