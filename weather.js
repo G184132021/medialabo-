@@ -86,6 +86,11 @@ function showResult(resp) {
     }
 
     // data をコンソールに出力
+    let color = 'rgba(85, 168, 206, 0.768)';
+    let div = document.querySelector('div.box');
+    div.style.backgroundColor = color;
+    
+
     console.log(data);
     let s = document.querySelector('span#data1');
     s.textContent = "＜"+data.name+"の天気＞";
@@ -119,7 +124,7 @@ function showError(err) {
 
 }
 
-// 通信の最後にいつも実行する処理
+// 通信の最後にいつも実行する処理- 
 function finish() {
     console.log('Ajax 通信が終わりました');
 }
