@@ -1,19 +1,9 @@
 
-div.box{
-    border: aqua;
-    border-radius: 10px 100px / 120px;
-    padding: 40px;
-    width: 450px;
-    height: 250px;
-    background-color: rgba(85, 168, 206, 0.768);
-    margin: 0 auto;
-  }
-
 div.h0{
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-content: center;
+    flex-direction: column;
+    height: 100%;
+    align-content: center;
   }
 
  div.h1{
@@ -67,4 +57,56 @@ body.body{
 }
 h2{
   margin-top: 0;
+}
+
+div.box{
+  border: aqua;
+  border-radius: 10px 100px / 120px;
+  padding: 40px;
+  width: 450px;
+  height: 250px;
+  background-color: rgba(85, 168, 206, 0.768);
+  margin: 0 auto;
+}
+
+/*全体*/
+.hidden_box {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+  padding: 0px;
+  font-weight: bold;
+  cursor :pointer;
+}
+
+/*ボタンホバー時*/
+.hidden_box label:hover {
+  background: #efefef;
+}
+
+/*チェックは見えなくする*/
+.hidden_box input {
+  display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+  padding: 10px 0;
+  height: auto;
+  opacity: 1;
 }

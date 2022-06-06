@@ -99,6 +99,15 @@ function showResult(resp) {
     e.textContent = data.main.temp_min+"℃";
     let f = document.querySelector('span#humidity');
     f.textContent = "湿度"+data.main.humidity+"%";
+    let A = document.querySelector('span#dataA');
+    A.textContent = "気圧"+data.main.pressure+"hPa";
+    let B = document.querySelector('span#dataB');
+    B.textContent = "体感温度"+data.main.feels_like+"℃";
+    let C = document.querySelector('span#dataC');
+    C.textContent = "風速"+data.wind.speed+"m/s";
+    let D = document.querySelector('span#dataD');
+    D.textContent = "視認性"+data.sys.visibility+"m";
+    
 
     // data.x を出力
     console.log(data.x);
