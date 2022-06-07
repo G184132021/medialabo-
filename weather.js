@@ -57,6 +57,7 @@ console.log(data.main.temp_min);
 //m.textContent = data.main.temp_min;
 
 
+
 let b = document.querySelector('button#kensaku');
 b.addEventListener('click', sendRequest);
 
@@ -86,18 +87,26 @@ function showResult(resp) {
     }
 
     // data をコンソールに出力
+    console.log(data);
     let color = 'rgba(85, 168, 206, 0.768)';
     let div = document.querySelector('div.box');
     div.style.backgroundColor = color;
-    
 
-    console.log(data);
+    let name;
+    if(data.name==="State of Rio de Janeiro"){
+      name="リオデジャネイロ";
+  }else if(data.name==="Paris"){
+      name="パリ";
+  }else{
+      name=data.name;
+  }
+    
     let s = document.querySelector('span#data1');
-    s.textContent = "＜"+data.name+"の天気＞";
+    s.textContent = "＜"+name+"の天気＞";
     let a = document.querySelector('span#weather');
     a.textContent = data.weather[0].description;
     let c = document.querySelector('span#temp');
-    c.textContent = data.main.temp+"℃";
+    c.textContent = "気温"+data.main.temp+"℃";
     let d = document.querySelector('span#max');
     d.textContent = data.main.temp_max+"℃";
     let e = document.querySelector('span#min');
@@ -111,13 +120,16 @@ function showResult(resp) {
     let C = document.querySelector('span#dataC');
     C.textContent = "風速"+data.wind.speed+"m/s";
     let D = document.querySelector('span#dataD');
-    D.textContent = "視認性"+data.sys.visibility+"m";
+    D.textContent = "視認性"+data.visibility+"m";
+
+
+    
+
     
 
     // data.x を出力
     console.log(data.x);
 }
-
 // 通信エラーが発生した時の処理
 function showError(err) {
     console.log(err);

@@ -70,16 +70,14 @@ div.box{
   transition: 0.8s;
 }
 
-.K1{
-  transition: 2s;
-}
-/*
+
+
 .hidden_box {
   display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2em 0;
-    padding: 0;
+  margin: 2em 0;
+  padding: 0;
 }
 
 
@@ -108,14 +106,23 @@ div.box{
   transition: 0.8s;
 }
 
-
 .hidden_box input:checked ~ .hidden_show {
   padding: 10px 0;
   height: auto;
   opacity: 1;
 }
-*/
-.hidden_box {
-  opacity: 0;
-  color: rgba(0, 0, 0, 0);
+#max{
+  color: red;
+}
+#min{
+  color: blue;
+}
+#weather{
+  padding-right: 10px;
+}
+#max{
+  padding-right: 10px;
+}
+#min{
+  padding-right: 10px;
 }
