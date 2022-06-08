@@ -1,3 +1,22 @@
-h1{
-    color: blue;
-}
+h1:first-letter {
+    font-size: 2em;
+    color: #7172ac;
+  }
+
+  h2 {
+    position: relative;
+    padding: 0.25em 0;
+  }
+  h2:after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: -webkit-linear-gradient(to right, rgb(90, 172, 230), transparent);
+    background: linear-gradient(to right, rgb(90, 172, 230), transparent);
+  }
+
+  h3 {
+    padding: 0.25em 0.5em;
+    background: transparent;
+    border-left: solid 5px #7db4e6;
+  }
