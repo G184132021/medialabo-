@@ -121,7 +121,7 @@ function showResult(resp) {
     C.textContent = "風速"+data.wind.speed+"m/s";
     let D = document.querySelector('span#dataD');
     D.textContent = "視認性"+data.visibility+"m";
-
+/*
     let png;
     if(data.weather[0].description==="曇りがち"){
       png = "kumorigati.png";
@@ -136,8 +136,9 @@ function showResult(resp) {
     }else{
       png = "kumo.png";
     }
+*/
 
-
+    /*
     let img = document.createElement('img');
     img.setAttribute('src', png);
     img.setAttribute('alt', '顔写真');
@@ -146,8 +147,25 @@ function showResult(resp) {
 
     let u = document.querySelector('div#jpeg');
     u.insertAdjacentElement('beforeend', img);
+*/
+let img = document.querySelector("img#image_place");
 
+let png;
+if(data.weather[0].description==="曇りがち"){
+  png = "kumo.png";
+}else if(data.weather[0].description==="小雨"){
+  png = "ame.png";
+}else if(data.weather[0].description==="霧"){
+  png = "kiri.png";
+}else if(data.weather[0].description==="厚い雲"){
+  png = "atuikumo.png";
+}else if(data.weather[0].description==="晴天"){
+  png = "hare.png";
+}else{
+  png = "kumo.png";
+}
 
+img.src = png;
     
 
     
